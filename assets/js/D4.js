@@ -7,7 +7,8 @@ function area(l1, l2) {
   return area;
 }
 
-console.log("ES.1", area(3, 6));
+console.log("ES.1.1", area(3, 6));
+console.log("ES.1.2", area(2, 10));
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -15,7 +16,20 @@ console.log("ES.1", area(3, 6));
  la loro somma moltiplicata per tre.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazySum(a, b) {
+  const sum = a + b;
+
+  if (a === b) {
+    const crazySum = sum * 3;
+    return crazySum;
+  }
+  return sum;
+}
+
+console.log("ES.2.1", crazySum(3, 6));
+console.log("ES.2.2", crazySum(3, 3));
+
+//
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.

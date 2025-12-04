@@ -110,7 +110,20 @@ console.log("ES.6.3", check3and7(8));
  della stringa originale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+// const string = "EPICODE";
+// console.log(string);
+
+// const slice1 = string.slice(1, -1);
+
+// console.log(slice1);
+
+function cutString(string) {
+  const newString = string.slice(1, -1);
+  return newString;
+}
+
+console.log("ES.9.1", cutString("Ciao"));
+console.log("ES.9.2", cutString("Epicode"));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.

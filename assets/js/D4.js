@@ -96,6 +96,21 @@ console.log("ES.6.3", check3and7(8));
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
+function reverseString(string) {
+  const characterArray = string.split("");
+  const reverseArray = [];
+
+  for (let i = string.length - 1; i >= 0; i--) {
+    const character = characterArray[i];
+    reverseArray.push(character);
+  }
+
+  const reverseString = reverseArray.join("");
+  return reverseString;
+}
+console.log("ES.7.1", reverseString("ciao"));
+console.log("ES.7.2", reverseString("Mi chiamo Giorgia"));
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 8
@@ -109,13 +124,6 @@ console.log("ES.6.3", check3and7(8));
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
-
-// const string = "EPICODE";
-// console.log(string);
-
-// const slice1 = string.slice(1, -1);
-
-// console.log(slice1);
 
 function cutString(string) {
   const newString = string.slice(1, -1);

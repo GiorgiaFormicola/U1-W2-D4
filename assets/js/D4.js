@@ -75,6 +75,17 @@ console.log("ES.4.6", boundary(400));
  ritornare la stringa originale senza alterarla.
 */
 
+function epify(string) {
+  const modifiedString = "EPICODE " + string;
+  if (string.toLowerCase().startsWith("epicode")) {
+    return string;
+  }
+  return modifiedString;
+}
+
+console.log("ES.5.1", epify("è un'ottima esperienza formativa"));
+console.log("ES.5.2", epify("EPICODE è un'ottima esperienza formativa"));
+
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
@@ -111,14 +122,10 @@ function reverseString(string) {
 console.log("ES.7.1", reverseString("ciao"));
 console.log("ES.7.2", reverseString("Mi chiamo Giorgia"));
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere

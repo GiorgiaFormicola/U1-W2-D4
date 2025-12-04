@@ -2,6 +2,13 @@
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
+function area(l1, l2) {
+  const area = l1 * l2;
+  return area;
+}
+
+console.log("ES.1", area(3, 6));
+
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
  La funzione deve ritornare la somma dei due parametri, ma se il valore dei due parametri è il medesimo deve invece tornare

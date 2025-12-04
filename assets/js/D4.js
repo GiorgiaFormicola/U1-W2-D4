@@ -30,8 +30,6 @@ function crazySum(a, b) {
 console.log("ES.2.1", crazySum(3, 6));
 console.log("ES.2.2", crazySum(3, 3));
 
-//
-
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
@@ -77,14 +75,22 @@ console.log("ES.4.6", boundary(400));
  ritornare la stringa originale senza alterarla.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7(a) {
+  if (a % 3 === 0 || a % 7 === 0) {
+    return true;
+  }
+
+  return false;
+}
+
+console.log("ES.6.1", check3and7(9));
+console.log("ES.6.2", check3and7(14));
+console.log("ES.6.3", check3and7(8));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")

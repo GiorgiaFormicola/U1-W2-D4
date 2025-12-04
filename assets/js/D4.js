@@ -116,4 +116,16 @@ console.log("ES.6.3", check3and7(8));
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(n) {
+  const array = [];
+  for (let i = 0; i < n; i++) {
+    const randomNumb = Math.floor(Math.random() * 11);
+    array.push(randomNumb);
+  }
+
+  return array;
+}
+
+console.log("ES.10.1", giveMeRandom(1));
+console.log("ES.10.2", giveMeRandom(10));
+console.log("ES.10.3", giveMeRandom(100));

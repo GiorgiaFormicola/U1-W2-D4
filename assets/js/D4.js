@@ -56,7 +56,20 @@ console.log("ES.3.2", crazyDiff(20));
  se n è uguale a 400.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function boundary(n) {
+  if ((n > 20 && n <= 100) || n === 400) {
+    return true;
+  }
+
+  return false;
+}
+
+console.log("ES.4.1", boundary(10));
+console.log("ES.4.2", boundary(20));
+console.log("ES.4.3", boundary(50));
+console.log("ES.4.4", boundary(100));
+console.log("ES.4.5", boundary(120));
+console.log("ES.4.6", boundary(400));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.

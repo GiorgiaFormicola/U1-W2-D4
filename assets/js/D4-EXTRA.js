@@ -5,7 +5,8 @@
  se il suo valore è maggiore di 5 o no.
  La funzione deve inoltre ritornare la somma di tutti i valori maggiori di 5.
 */
-let randomArray = [];
+
+/* let randomArray = [];
 
 function giveMeRandom() {
   randomNumb = Math.floor(Math.random() * 10);
@@ -30,16 +31,51 @@ function checkArray() {
   return sum;
 }
 
-console.log("Somma numeri > 5 = ", checkArray());
-
-// console.log("SOMMA", checkArray());
+console.log("Somma numeri > 5 = ", checkArray()); */
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "shoppingCartTotal" che calcola il totale dovuto al negozio (tenendo conto delle quantità di ogni oggetto).
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let shoppingCart = [];
+
+let cartItem = {
+  price: null,
+  name: null,
+  id: null,
+  quantity: null,
+};
+
+function giveMeRandom() {
+  randomNumb = Math.floor(Math.random() * 10 + 1);
+  return randomNumb;
+}
+
+for (let i = 0; i < giveMeRandom(); i++) {
+  cartItem = {
+    price: giveMeRandom(),
+    name: null,
+    id: null,
+    quantity: giveMeRandom(),
+  };
+  shoppingCart.push(cartItem);
+}
+
+console.log("Carrello: ", shoppingCart);
+
+function shoppingCartTotal() {
+  let total = 0;
+  let itemTotal = 0;
+  for (let i = 0; i < shoppingCart.length; i++) {
+    const cartItem = shoppingCart[i];
+    itemTotal = cartItem.price * cartItem.quantity;
+    total = total + itemTotal;
+  }
+  return total;
+}
+
+console.log("Il totale del carrelo è " + shoppingCartTotal() + " euro");
 
 /* EXTRA 3
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".

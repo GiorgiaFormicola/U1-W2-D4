@@ -38,7 +38,7 @@ console.log("Somma numeri > 5 = ", checkArray()); */
  Crea una funzione chiamata "shoppingCartTotal" che calcola il totale dovuto al negozio (tenendo conto delle quantità di ogni oggetto).
 */
 
-let shoppingCart = [];
+/* let shoppingCart = [];
 
 let cartItem = {
   price: null,
@@ -75,14 +75,52 @@ function shoppingCartTotal() {
   return total;
 }
 
-console.log("Il totale del carrelo è " + shoppingCartTotal() + " euro");
+console.log("Il totale del carrelo è " + shoppingCartTotal() + " euro"); */
 
 /* EXTRA 3
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "addToShoppingCart" che riceve un nuovo oggetto dello stesso tipo, lo aggiunge a "shoppingCart" e ritorna il nuovo numero totale degli elementi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let shoppingCart = [];
+
+let cartItem = {
+  price: null,
+  name: null,
+  id: null,
+  quantity: null,
+};
+
+function giveMeRandom() {
+  randomNumb = Math.floor(Math.random() * 10 + 1);
+  return randomNumb;
+}
+
+for (let i = 0; i < giveMeRandom(); i++) {
+  cartItem = {
+    price: giveMeRandom(),
+    name: null,
+    id: null,
+    quantity: giveMeRandom(),
+  };
+  shoppingCart.push(cartItem);
+}
+
+console.log("Carrello: ", shoppingCart);
+
+const newCartItem = {
+  price: giveMeRandom(),
+  name: null,
+  id: null,
+  quantity: giveMeRandom(),
+};
+
+function addToShoppingCart(item) {
+  shoppingCart.push(item);
+  return shoppingCart.length;
+}
+
+console.log("Totale elementi: ", addToShoppingCart(newCartItem));
 
 /* EXTRA 4
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".

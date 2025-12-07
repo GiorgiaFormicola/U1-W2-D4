@@ -213,8 +213,6 @@ console.log("L'ultimo elemento aggiunto al carrello è: ", latestShoppingCart(sh
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
@@ -294,7 +292,7 @@ console.log(longest(stringArray)); */
  La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
 */
 
-const spamMail = "Questa è un'email di SPAM.";
+/* const spamMail = "Questa è un'email di SPAM.";
 const scamMail = "Questa è un'email di SCAM.";
 const mail = "Questa è un'email.";
 
@@ -310,13 +308,26 @@ function antiSpam(emailContent) {
 
 console.log("Email di spam", antiSpam(spamMail));
 console.log("Email di scam", antiSpam(scamMail));
-console.log("Email", antiSpam(mail));
+console.log("Email", antiSpam(mail)); */
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function daysCount(date) {
+  const today = new Date();
+  const todayMilliseconds = today.getTime();
+  const dateMilliseconds = date.getTime();
+  const millisecondsPassed = Math.abs(todayMilliseconds - dateMilliseconds);
+  const daysPassed = Math.floor(millisecondsPassed / 86400000);
+  return daysPassed;
+}
+
+const birthday = new Date("1997-08-12T00:00:00Z");
+const yesterday = new Date("2025-12-06T00:00:00Z");
+
+console.log(daysCount(birthday) + " days have passed since my birthday.");
+console.log(daysCount(yesterday) + " day has passed since yesterday.");
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due numeri interi, "x" e "y".
@@ -325,5 +336,3 @@ console.log("Email", antiSpam(mail));
  ["00","01","02"
  "10","11","12"]
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */

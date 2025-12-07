@@ -262,7 +262,7 @@ console.log("Media aritmetica =", average(randomArray)); */
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
 
-let stringArray = ["Ciao", ",", "mi", "chiamo", "Giorgia", "."];
+/* let stringArray = ["Ciao", ",", "mi", "chiamo", "Giorgia", "."];
 console.log(stringArray);
 
 function longest(array) {
@@ -287,14 +287,30 @@ function longest(array) {
   }
 }
 
-console.log(longest(stringArray));
+console.log(longest(stringArray)); */
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
  La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const spamMail = "Questa è un'email di SPAM.";
+const scamMail = "Questa è un'email di SCAM.";
+const mail = "Questa è un'email.";
+
+function antiSpam(emailContent) {
+  const lowerCaseContent = emailContent.toLowerCase();
+
+  if (lowerCaseContent.search("spam") === -1 && lowerCaseContent.search("scam") === -1) {
+    return true;
+  }
+
+  return false;
+}
+
+console.log("Email di spam", antiSpam(spamMail));
+console.log("Email di scam", antiSpam(scamMail));
+console.log("Email", antiSpam(mail));
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.

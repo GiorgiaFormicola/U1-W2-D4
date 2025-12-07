@@ -128,7 +128,7 @@ console.log("Totale elementi: ", addToShoppingCart(newCartItem)); */
  Crea una funzione chiamata "maxShoppingCart" che riceve l'array "shoppingCart" e ritorna l'oggetto più costoso in esso contenuto.
 */
 
-let shoppingCart = [];
+/* let shoppingCart = [];
 
 let cartItem = {
   price: null,
@@ -167,14 +167,45 @@ function maxShoppingCart(array) {
   return maxPrice;
 }
 
-console.log("L'elemento più costoso costa " + maxShoppingCart(shoppingCart) + " euro");
+console.log("L'elemento più costoso costa " + maxShoppingCart(shoppingCart) + " euro"); */
 
 /* EXTRA 5
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let shoppingCart = [];
+
+let cartItem = {
+  price: null,
+  name: null,
+  id: null,
+  quantity: null,
+};
+
+function giveMeRandom() {
+  randomNumb = Math.floor(Math.random() * 10 + 1);
+  return randomNumb;
+}
+
+for (let i = 0; i < giveMeRandom(); i++) {
+  cartItem = {
+    price: giveMeRandom(),
+    name: null,
+    id: null,
+    quantity: giveMeRandom(),
+  };
+  shoppingCart.push(cartItem);
+}
+
+console.log("Carrello: ", shoppingCart);
+
+function latestShoppingCart(array) {
+  const lastItem = array[array.length - 1];
+  return lastItem;
+}
+
+console.log("L'ultimo elemento aggiunto al carrello è: ", latestShoppingCart(shoppingCart));
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.

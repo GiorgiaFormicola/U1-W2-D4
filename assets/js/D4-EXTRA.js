@@ -219,7 +219,7 @@ console.log("L'ultimo elemento aggiunto al carrello è: ", latestShoppingCart(sh
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
-let randomArray = ["a"];
+/* let randomArray = ["a"];
 
 function giveMeRandom() {
   randomNumb = Math.floor(Math.random() * 10);
@@ -256,13 +256,38 @@ function average(array) {
   return average;
 }
 
-console.log("Media aritmetica =", average(randomArray));
+console.log("Media aritmetica =", average(randomArray)); */
 
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let stringArray = ["Ciao", ",", "mi", "chiamo", "Giorgia", "."];
+console.log(stringArray);
+
+function longest(array) {
+  const wordLengths = [];
+
+  for (let i = 0; i < array.length; i++) {
+    word = array[i];
+
+    console.log(word.length);
+
+    wordLengths.push(word.length);
+  }
+
+  const maxLength = Math.max(...wordLengths);
+  console.log(maxLength);
+
+  for (let i = 0; i < array.length; i++) {
+    word = array[i];
+    if (word.length === maxLength) {
+      console.log("La stringa più lunga dell'array è: ", word);
+    }
+  }
+}
+
+console.log(longest(stringArray));
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.

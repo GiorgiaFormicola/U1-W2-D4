@@ -174,7 +174,7 @@ console.log("L'elemento più costoso costa " + maxShoppingCart(shoppingCart) + "
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
 */
 
-let shoppingCart = [];
+/* let shoppingCart = [];
 
 let cartItem = {
   price: null,
@@ -206,6 +206,7 @@ function latestShoppingCart(array) {
 }
 
 console.log("L'ultimo elemento aggiunto al carrello è: ", latestShoppingCart(shoppingCart));
+ */
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
@@ -218,7 +219,44 @@ console.log("L'ultimo elemento aggiunto al carrello è: ", latestShoppingCart(sh
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let randomArray = ["a"];
+
+function giveMeRandom() {
+  randomNumb = Math.floor(Math.random() * 10);
+  return randomNumb;
+}
+
+for (let i = 0; i < giveMeRandom(); i++) {
+  randomArray.push(giveMeRandom());
+}
+
+randomArray.push("c");
+randomArray.splice(randomArray.length / 2, 0, "b");
+console.log("Array = ", randomArray);
+
+function average(array) {
+  let onlyNumbArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const arrayValue = array[i];
+    if (typeof arrayValue === typeof 0) {
+      onlyNumbArray.push(arrayValue);
+    }
+  }
+
+  console.log("Array di soli numeri = ", onlyNumbArray);
+
+  let sum = 0;
+  for (let i = 0; i < onlyNumbArray.length; i++) {
+    const number = onlyNumbArray[i];
+    sum = sum + number;
+  }
+
+  const average = sum / onlyNumbArray.length;
+  return average;
+}
+
+console.log("Media aritmetica =", average(randomArray));
 
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.

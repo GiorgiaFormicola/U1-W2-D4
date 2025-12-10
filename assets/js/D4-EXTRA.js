@@ -213,6 +213,35 @@ console.log("L'ultimo elemento aggiunto al carrello è: ", latestShoppingCart(sh
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
 */
 
+function giveMeRandom() {
+  randomNumb = Math.floor(Math.random() * 10);
+  return randomNumb;
+}
+
+function loopUntil(x) {
+  if (Number.isInteger(x)) {
+    if (x >= 0 && x <= 9) {
+      for (let i = 0; i < 3; i++) {
+        let number = 0;
+
+        while (number <= x) {
+          number = giveMeRandom();
+          console.log("ES.6:", "Round", i + 1, "-> number =", number);
+          number++;
+        }
+      }
+    } else {
+      console.log("ES.6:", x, "non è un numero compreso tra 0 e 9");
+    }
+  } else {
+    console.log("ES.6:", x, "non è un numero intero");
+  }
+}
+
+loopUntil(7);
+loopUntil(12);
+loopUntil(1.2);
+
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
@@ -314,7 +343,7 @@ console.log("Email", antiSpam(mail)); */
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
 
-function daysCount(date) {
+/* function daysCount(date) {
   const today = new Date();
   const todayMilliseconds = today.getTime();
   const dateMilliseconds = date.getTime();
@@ -327,7 +356,7 @@ const birthday = new Date("1997-08-12T00:00:00Z");
 const yesterday = new Date("2025-12-06T00:00:00Z");
 
 console.log(daysCount(birthday) + " days have passed since my birthday.");
-console.log(daysCount(yesterday) + " day has passed since yesterday.");
+console.log(daysCount(yesterday) + " day has passed since yesterday."); */
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due numeri interi, "x" e "y".
@@ -335,4 +364,26 @@ console.log(daysCount(yesterday) + " day has passed since yesterday.");
  Es.: x = 3, y = 2
  ["00","01","02"
  "10","11","12"]
-*/
+
+/* // function matrixGenerator(x, y) {}
+let x = 3;
+let y = 2;
+
+let matrixArray = [];
+let matrix = [];
+
+for (let i = 0; i < x; i++) {
+  arrayElement = matrixArray[i];
+  matrixArray.push(i.toString());
+  for (let i = 0; i < y; i++) {
+    matrix.push(matrixArray);
+  }
+
+  // for (let i = 0; i < x; i++) {
+  //   // arrayElement = matrixArray[i];
+  //   // matrixArray.push(i.toString());
+  // }
+}
+console.log(matrixArray);
+
+console.log(matrix); */
